@@ -38,6 +38,26 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="BL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="DL\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\Tasky.Core\BL\Task.cs">
+      <Link>BL\Task.cs</Link>
+    </Compile>
+    <Compile Include="..\Tasky.Core\BL\Managers\TaskManager.cs">
+      <Link>BL\Managers\TaskManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Tasky.Core\DAL\TaskyManager.cs">
+      <Link>DAL\TaskyManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Tasky.Core\DL\SQLite.cs">
+      <Link>DL\SQLite.cs</Link>
+    </Compile>
+    <Compile Include="..\Tasky.Core\DL\TaskyDatabase.cs">
+      <Link>DL\TaskyDatabase.cs</Link>
+    </Compile>
+  </ItemGroup>
 </Project>

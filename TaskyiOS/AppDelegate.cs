@@ -14,7 +14,8 @@ namespace TaskyiOS
 	{
 		// class-level declarations
 		UIWindow window;
-		TaskyiOSViewController viewController;
+		HomeViewController viewController;
+	
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this 
 		// method you should instantiate the window, load the UI into it and then make the window
@@ -26,8 +27,10 @@ namespace TaskyiOS
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
-			viewController = new TaskyiOSViewController ();
-			window.RootViewController = viewController;
+			viewController = new HomeViewController ();
+			UINavigationController nav = new UINavigationController (viewController);
+
+			window.RootViewController = nav;
 			window.MakeKeyAndVisible ();
 			
 			return true;
