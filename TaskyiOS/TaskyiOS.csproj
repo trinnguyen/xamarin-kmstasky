@@ -23,6 +23,8 @@
     <MtouchLink>None</MtouchLink>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -104,13 +106,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <InterfaceDefinition Include="HomeViewController.xib" />
+    <InterfaceDefinition Include="TaskDetailsViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\TaskyiOS.Core\TaskyiOS.Core.csproj">
       <Project>{F1C0ACE7-1B44-4127-90DA-2329EEB330F3}</Project>
       <Name>TaskyiOS.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="HomeViewController.xib" />
-    <InterfaceDefinition Include="TaskDetailsViewController.xib" />
   </ItemGroup>
 </Project>
